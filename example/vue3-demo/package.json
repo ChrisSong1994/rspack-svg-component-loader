@@ -1,0 +1,19 @@
+{
+  "name": "vue3-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rspack serve",
+    "build": "cross-env NODE_ENV=production rspack build"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^1.1.4",
+    "@rspack/core": "^1.1.4",
+    "cross-env": "^7.0.3",
+    "vue-loader": "^17.3.1",
+    "rspack-svg-component-loader": "file:../.."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "rspack-svg-component-loader",
+  "version": "1.0.0",
+  "description": "rspack svg component loader",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "keywords": ["rspack","svg","svg component"],
+  "author": "ChrisSong1994",
+  "license": "ISC"
+}
