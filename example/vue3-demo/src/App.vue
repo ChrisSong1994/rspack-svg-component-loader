@@ -1,21 +1,23 @@
 <script setup>
 import { ref } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
-import LogoIcon from "./assets/vue.svg?component";
+import VueIcon from "./assets/vue.svg?component";
+import RspackIcon from "./assets/rspack.svg?component";
 
 const title = ref("Rspack + Vue");
 </script>
 
 <template>
   <div>
-    <LogoIcon class="logo" />
+    <VueIcon class="logo" />
+    <RspackIcon class="logo" />
   </div>
   <HelloWorld :msg="title" />
 </template>
 
 <style scoped>
 .logo {
-  height: 6em;
+  /* height: 6em; */
   width: 12em;
   padding: 1.5em;
   will-change: filter;
