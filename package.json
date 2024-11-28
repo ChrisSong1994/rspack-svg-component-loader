@@ -1,6 +1,6 @@
 {
   "name": "rspack-svg-loader",
-  "version": "0.0.1",
+  "version": "0.0.1-beta.1",
   "description": "rspack svg loader for react and vue3",
   "author": "ChrisSong1994",
   "license": "Apache",

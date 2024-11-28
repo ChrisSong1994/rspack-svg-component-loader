@@ -15,7 +15,6 @@ module.exports = function svgComponentLoader(source) {
       path: resourcePath,
     }).data;
 
-    // To prevent compileTemplate from removing the style tag
     svg = svg
       .replace(/<style/g, '<component is="style"')
       .replace(/<\/style/g, "</component");
