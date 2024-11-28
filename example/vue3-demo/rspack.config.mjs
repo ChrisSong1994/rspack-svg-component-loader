@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { defineConfig } from "@rspack/cli";
 import { rspack } from "@rspack/core";
 import { VueLoaderPlugin } from "vue-loader";
-import { createRequire } from 'node:module';
+import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -32,13 +32,6 @@ export default defineConfig({
         },
       },
       {
-        test: /\.svg$/,
-        loader: require.resolve('../../index.js'),
-        options: {
-          svgoConfig: {},
-        },
-      },
-      {
         test: /\.(js|ts)$/,
         use: [
           {
@@ -54,8 +47,17 @@ export default defineConfig({
           },
         ],
       },
+
       {
-        test: /\.svg/,
+        test: /\.svg$/,
+        loader: "rspack-svg-loader/vue",
+        options: {
+          svgoConfig: {},
+        },
+      },
+      {
+        resourceQuery: "/^(?!.*\bcomponent\b).*$/",
+        test: /\.svg$/,
         type: "asset/resource",
       },
     ],
