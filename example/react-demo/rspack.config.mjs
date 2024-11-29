@@ -21,15 +21,6 @@ export default defineConfig({
   module: {
     rules: [
       {
-        test: /\.svg$/,
-        loader: "rspack-svg-loader/react",
-        options: {
-          svgoConfig: {
-            xx: 11,
-          },
-        },
-      },
-      {
         test: /\.(jsx?|tsx?)$/,
         use: [
           {
@@ -52,6 +43,20 @@ export default defineConfig({
             },
           },
         ],
+      },
+      {
+        resourceQuery: "/^(?!.*\bcomponent\b).*$/",
+        test: /\.svg$/,
+        type: "asset/resource",
+      },
+      {
+        test: /\.svg$/,
+        loader: "rspack-svg-loader/react",
+        options: {
+          svgoConfig: {
+            xx: 11,
+          },
+        },
       },
     ],
   },
