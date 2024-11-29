@@ -47,7 +47,6 @@ export default defineConfig({
           },
         ],
       },
-
       {
         test: /\.svg$/,
         loader: "rspack-svg-loader/vue",
