@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
-import VueIcon from "./assets/vue.svg?component";
+import VueIcon from "./assets/vue.svg?component&namedExport=VueIcon";
 import RspackIcon from "./assets/rspack.svg?component";
 
 const title = ref("Rspack + Vue");
