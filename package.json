@@ -13,8 +13,7 @@
     "vue svg loader"
   ],
   "files": [
-    "./vue-loader.js",
-    "./react-loader.js"
+    "./lib"
   ],
   "exports": {
     "./vue": "./lib/vue-loader.js",
