@@ -51,7 +51,18 @@ export default defineConfig({
         test: /\.svg$/,
         loader: "rspack-svg-loader/vue",
         options: {
-          svgoConfig: {},
+          svgoConfig: {
+            plugins: [
+              {
+                name: "preset-default",
+                params: {
+                  overrides: {
+                    removeViewBox: true, // 例如，禁用移除 viewBox
+                  },
+                },
+              },
+            ],
+          },
         },
       },
       {

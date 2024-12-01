@@ -54,7 +54,16 @@ export default defineConfig({
         loader: "rspack-svg-loader/react",
         options: {
           svgoConfig: {
-            xx: 11,
+            plugins: [
+              {
+                name: "preset-default",
+                params: {
+                  overrides: {
+                    removeViewBox: true, // 例如，禁用移除 viewBox
+                  },
+                },
+              },
+            ],
           },
         },
       },
