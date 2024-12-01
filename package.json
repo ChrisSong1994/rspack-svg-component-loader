@@ -4,6 +4,7 @@
   "description": "a rspack loader for load svg as react/vue component",
   "author": "ChrisSong1994",
   "license": "MIT",
+  "repository": "https://github.com/ChrisSong1994/rspack-svg-loader",
   "keywords": [
     "rspack",
     "svg",
