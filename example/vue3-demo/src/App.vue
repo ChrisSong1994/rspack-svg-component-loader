@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
-import VueIcon from "./assets/vue.svg?component&namedExport=VueIcon";
+import VueLogoIcon from "./assets/vue.svg?component&namedExport=VueIcon";
 import RspackIcon from "./assets/rspack.svg?component";
 
 const title = ref("Rspack + Vue");
@@ -9,7 +9,7 @@ const title = ref("Rspack + Vue");
 
 <template>
   <div>
-    <VueIcon class="logo" />
+    <VueLogoIcon class="logo" />
     <RspackIcon class="logo" />
   </div>
   <HelloWorld :msg="title" />

@@ -1,7 +1,7 @@
 {
   "name": "rspack-svg-loader",
-  "version": "0.0.1-beta.1",
-  "description": "rspack svg loader for react and vue3",
+  "version": "0.0.1",
+  "description": "a rspack loader for load svg as react/vue component",
   "author": "ChrisSong1994",
   "license": "MIT",
   "keywords": [
@@ -10,7 +10,8 @@
     "svgo",
     "svg loader",
     "react svg loader",
-    "vue svg loader"
+    "vue svg loader",
+    "svg component"
   ],
   "files": [
     "./lib"

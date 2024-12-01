@@ -10,7 +10,8 @@ npm i rspack-svg-loader --save-dev
 
 ## Usage
 
-### for vue
+you can use it in rspack.config.js
+**for vue**
 
 ```javascript
 const rspack = require('@rspack/core');
@@ -27,7 +28,7 @@ export default defineConfig({
  }})
 ```
 
-### for react
+**for react**
 
 ```javascript
 const rspack = require('@rspack/core');
@@ -43,3 +44,45 @@ export default defineConfig({
       },
  }})
 ```
+
+then you can import svg as react/vue component
+
+**for react**
+
+```javascript
+import ReactLogoIcon from "./assets/react.svg?component";
+
+function App() {
+  return (
+    <div className="App">
+      <ReactLogoIcon className="logo" />
+    </div>
+  );
+}
+```
+
+**for vue**
+
+```vue
+<script setup>
+import VueLogoIcon from "./assets/vue.svg?component&namedExport=VueIcon";
+</script>
+<template>
+  <div>
+    <VueLogoIcon class="logo" />
+  </div>
+</template>
+
+<style scoped>
+
+```
+
+## Options
+
+### svgoConfig
+
+you can config svgo options in svgoConfig
+
+### namedExport
+
+you can set namedExport to change the export name, adnd you can use it in vue/React devTools
