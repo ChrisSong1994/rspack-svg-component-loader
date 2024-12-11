@@ -45,11 +45,6 @@ export default defineConfig({
         ],
       },
       {
-        resourceQuery: "/^(?!.*\bcomponent\b).*$/",
-        test: /\.svg$/,
-        type: "asset/resource",
-      },
-      {
         test: /\.svg$/,
         loader: "rspack-svg-loader/react",
         options: {

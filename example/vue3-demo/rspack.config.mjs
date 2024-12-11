@@ -8,7 +8,7 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// Target browsers, see: https://github.com/browserslist/browserslist
+// Target browsers, see: https:// github.com/browserslist/browserslist
 const targets = ["chrome >= 87", "edge >= 88", "firefox >= 78", "safari >= 14"];
 
 export default defineConfig({
@@ -51,6 +51,7 @@ export default defineConfig({
         test: /\.svg$/,
         loader: "rspack-svg-loader/vue",
         options: {
+          type: "",
           svgoConfig: {
             plugins: [
               {
@@ -64,21 +65,12 @@ export default defineConfig({
             ],
           },
         },
-      },
-      {
-        resourceQuery: "/^(?!.*\bcomponent\b).*$/",
-        test: /\.svg$/,
-        type: "asset/resource",
-      },
+      }
     ],
   },
   plugins: [
     new rspack.HtmlRspackPlugin({
       template: "./index.html",
-    }),
-    new rspack.DefinePlugin({
-      __VUE_OPTIONS_API__: true,
-      __VUE_PROD_DEVTOOLS__: false,
     }),
     new VueLoaderPlugin(),
   ],

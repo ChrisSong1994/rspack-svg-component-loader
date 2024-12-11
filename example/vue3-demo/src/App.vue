@@ -1,18 +1,17 @@
 <script setup>
-import { ref } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
 import VueLogoIcon from "./assets/vue.svg?component&namedExport=VueIcon";
 import RspackIcon from "./assets/rspack.svg?component";
+import LogoContent from "./assets/rspack.svg";
 
-const title = ref("Rspack + Vue");
 </script>
 
 <template>
   <div>
     <VueLogoIcon class="logo" />
     <RspackIcon class="logo" />
+    <img width="100" height="100" alt="Vue logo" :src="LogoContent" />
+    <img width="100" height="100" alt="Vue logo" src="./assets/vue.svg" />
   </div>
-  <HelloWorld :msg="title" />
 </template>
 
 <style scoped>
