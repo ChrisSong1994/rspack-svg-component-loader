@@ -10,6 +10,8 @@ npm i rspack-svg-loader --save-dev
 
 ## Usage
 
+** BEFORE: you should set vue version >= 3.2.13 or react version >= 17 **
+
 you can use it in rspack.config.js
 **for vue**
 
